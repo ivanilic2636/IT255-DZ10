@@ -1,0 +1,21 @@
+<div class="col-lg-12">
+  <div class="row">
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="name" [(ngModel)]="name">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="col-lg-12">
+Vozaci
+</div>
+<div class="col-lg-12">
+<div *ngFor="let vozac of data | SearchPipe:name">
+<br/>Ime: {{vozac.ime}}
+<br/> Email: {{vozac.prezime}}
+
+<br/> Company: {{vozac.bolid}}
+<br/> <br/>
+</div>
+</div>
